@@ -1,5 +1,17 @@
 #include "stm32f10x.h"                  // Device header
 
+#include "stm32f10x_rcc.h"              //RCC header
+
+#include "stm32f10x_gpio.h"             //GPIO header
+void delay(void)
+{
+	int i = 0;
+	for(i = 0;i<5000000;i++)
+	{
+		;
+	}
+}
+
 int main(void)
 {
 //	//直接控制寄存器电灯PC13
@@ -10,16 +22,21 @@ int main(void)
 //	GPIOC->ODR = 0x00002000;
 	
 	//库函数实现PC13控制
+	//初始化RCC
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC,ENABLE);
+
+	//设置GPIO_RCC
 	GPIO_InitTypeDef GPIO_InitStructure;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+
+
 	GPIO_Init(GPIOC,&GPIO_InitStructure);
-//	GPIO_SetBits(GPIOC,GPIO_Pin_13);//高电平
-	GPIO_ResetBits(GPIOC,GPIO_Pin_13);
+	GPIO_SetBits(GPIOC,GPIO_Pin_13);//高电平
+//	GPIO_ResetBits(GPIOC,GPIO_Pin_13);
 	while(1)
 	{
-		//
+		
 	}
 }
