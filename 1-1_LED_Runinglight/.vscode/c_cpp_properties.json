@@ -7,7 +7,8 @@
                 "d:\\code\\Tyler0o0\\STM32\\1-1_LED_Runinglight\\Library",
                 "d:\\code\\Tyler0o0\\STM32\\1-1_LED_Runinglight\\User",
                 "D:\\apply\\Keil5\\ARM\\ARMCC\\include",
-                "D:\\apply\\Keil5\\ARM\\ARMCC\\include\\rw"
+                "D:\\apply\\Keil5\\ARM\\ARMCC\\include\\rw",
+                "D:\\code\\Tyler0o0\\STM32\\1-3 Contral\\Headware"
             ],
             "defines": [
                 "USE_STDPERIPH_DRIVER",
