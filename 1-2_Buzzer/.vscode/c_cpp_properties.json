@@ -1,11 +1,11 @@
 {
     "configurations": [
         {
-            "name": "target1",
+            "name": "Target 1",
             "includePath": [
-                "d:\\code\\Tyler0o0\\STM32\\1-1_LED_Runinglight\\Start",
-                "d:\\code\\Tyler0o0\\STM32\\1-1_LED_Runinglight\\Library",
-                "d:\\code\\Tyler0o0\\STM32\\1-1_LED_Runinglight\\User",
+                "d:\\code\\Tyler0o0\\STM32\\1-2_Buzzer\\Start",
+                "d:\\code\\Tyler0o0\\STM32\\1-2_Buzzer\\User",
+                "d:\\code\\Tyler0o0\\STM32\\1-2_Buzzer\\Library",
                 "D:\\apply\\Keil5\\ARM\\ARMCC\\include",
                 "D:\\apply\\Keil5\\ARM\\ARMCC\\include\\rw"
             ],
@@ -84,8 +84,7 @@
                 "__yield()=",
                 "__vfp_status(x,y)=0"
             ],
-            "intelliSenseMode": "${default}",
-            "compilerPath": "D:/MinGW64/bin/gcc.exe"
+            "intelliSenseMode": "${default}"
         }
     ],
     "version": 4

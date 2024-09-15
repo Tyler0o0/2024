@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "C_test",
+			"path": "../../C_test"
+		},
+		{
+			"name": "STM32",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
