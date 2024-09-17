@@ -416,6 +416,16 @@
           <GroupName>Library</GroupName>
           <Files>
             <File>
+              <FileName>Driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Library\Driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>Driver.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Library\Driver.h</FilePath>
+            </File>
+            <File>
               <FileName>misc.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Library\misc.c</FilePath>
@@ -648,6 +658,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Driver</GroupName>
+          <Files>
+            <File>
+              <FileName>Driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Driver\Driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>Driver.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Driver\Driver.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>User</GroupName>
           <Files>
             <File>
@@ -664,11 +689,6 @@
               <FileName>stm32f10x_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\stm32f10x_it.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_it.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\User\stm32f10x_it.h</FilePath>
             </File>
           </Files>
         </Group>

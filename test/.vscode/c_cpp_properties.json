@@ -6,9 +6,9 @@
                 "d:\\code\\Tyler0o0\\STM32\\test\\Start",
                 "d:\\code\\Tyler0o0\\STM32\\test\\User",
                 "d:\\code\\Tyler0o0\\STM32\\test\\Library",
-                "D:\\apply\\Keil5\\UV4\\ARM\\ARMCC\\include",
-                "${default}",
-                "${workspaceFolder}/**"
+                "D:\\apply\\Keil5\\ARM\\ARMCC\\include",
+                "D:\\apply\\Keil5\\ARM\\ARMCC\\include\\rw",
+                "d:\\code\\Tyler0o0\\STM32\\test\\Driver"
             ],
             "defines": [
                 "USE_STDPERIPH_DRIVER",
@@ -85,7 +85,8 @@
                 "__yield()=",
                 "__vfp_status(x,y)=0"
             ],
-            "intelliSenseMode": "${default}"
+            "intelliSenseMode": "${default}",
+            "cStandard": "c17"
         },
         {
             "name": "1-1_LED_flishing",
