@@ -4,15 +4,15 @@
 void Buzzer_On(void)
 {
     //开启PB时钟
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA,ENABLE);
 
-    GPIO_InitTypeDef GPIO_InitStruct_PB12;
-        GPIO_InitStruct_PB12.GPIO_Mode = GPIO_Mode_Out_PP;//推挽
-        GPIO_InitStruct_PB12.GPIO_Pin = GPIO_Pin_12;//
-        GPIO_InitStruct_PB12.GPIO_Speed = GPIO_Speed_10MHz;
+    GPIO_InitTypeDef GPIO_InitStruct_PA;
+        GPIO_InitStruct_PA.GPIO_Mode = GPIO_Mode_Out_PP;//推挽
+        GPIO_InitStruct_PA.GPIO_Pin = GPIO_Pin_1|GPIO_Pin_0;//
+        GPIO_InitStruct_PA.GPIO_Speed = GPIO_Speed_50MHz;
 
     //设置输出模式
-    GPIO_Init(GPIOB,&GPIO_InitStruct_PB12);
+    GPIO_Init(GPIOA,&GPIO_InitStruct_PA);
 }
 void Delay_ms(uint32_t ms)
 {
@@ -23,7 +23,7 @@ void Delay_ms(uint32_t ms)
     SysTick->VAL = 0;
     SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Pos|
                     SysTick_CTRL_ENABLE_Msk;
-    while((SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk) == 0)
+    while(!(SysTick->CTRL>>16))
     {
         ;
     }
@@ -33,14 +33,14 @@ int main(void)
 {
     //初始化
     Buzzer_On();
-    int ms = 100;//0<ms<1000;
+    int ms = 1000;//0<ms<1000;
     GPIO_SetBits(GPIOB,GPIO_Pin_12);
     while(1)
     {
-        // GPIO_ResetBits(GPIOB,GPIO_Pin_12);
-        // Delay_ms(ms);
-        // GPIO_SetBits(GPIOB,GPIO_Pin_12);
-        // Delay_ms(ms);
+        GPIOA->BRR = 0x3;
+        Delay_ms(ms);
+        GPIOA->BSRR = 0x3;
+        Delay_ms(ms);
     }
 }
 
