@@ -42,13 +42,24 @@
 //     }
 // }
 
+// int main(void)
+// {
+//     LED_Init();
+//     Redray_Sensor_Init();
+    
+//     while(1)
+//     {
+//         LED_ON();
+//     }
+// }
+
 int main(void)
 {
-    LED_Init();
-    Redray_Sensor_Init();
-    
+    USART_PA9_TX_Init();
+    Send_Byte(0x41);
     while(1)
     {
-        LED_ON();
+
     }
 }
+
